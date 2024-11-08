@@ -25,7 +25,7 @@ html, body {
     max-height: 90%; /* Limit height to avoid overflow */
     overflow-y: auto; /* Enable vertical scrolling if needed */
     padding: 20px; /* Add padding for better spacing */
-    background-color: rgb(46, 44, 44);
+    background-color: rgb(7, 1, 39);
     position: fixed;
     inset: 0;
     margin: auto;
@@ -53,7 +53,7 @@ html, body {
     display: flex;
     padding-top: 70px;
     margin: 10px;
-    color: #e0dddd;
+    color: #ffffff;
 }
 
 #container #row {
@@ -254,9 +254,9 @@ form input, form textarea{
     #container #row {
         margin-left: -8px;
     }
-    #section-1 {
+    /* #section-1 {
       margin-top: 75px;
-    } 
+    }  */
     #title{
         font-size: 30px;
     }
