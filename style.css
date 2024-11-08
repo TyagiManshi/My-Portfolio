@@ -1,0 +1,308 @@
+#wrapper-canvas canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+    margin: 0;
+    padding: 0;
+}
+
+.close-icon {
+    font-size: 48px;
+    font-weight: 700;
+    position: absolute;
+    right: 16px;
+    cursor: pointer;
+}
+
+.popup {
+    width: 90%; /* Responsive width */
+    max-width: 1200px; /* Maximum width */
+    height: auto; /* Allow height to adjust based on content */
+    max-height: 90%; /* Limit height to avoid overflow */
+    overflow-y: auto; /* Enable vertical scrolling if needed */
+    padding: 20px; /* Add padding for better spacing */
+    background-color: rgb(46, 44, 44);
+    position: fixed;
+    inset: 0;
+    margin: auto;
+    z-index: 99;
+    transform: scale(0);
+    transition: transform 0.2s ease-in-out;
+}
+
+.popup-open .popup {
+    transform: scale(1);
+}
+
+.overlay {
+    background-color: rgba(0, 0, 0, 0.7);
+    inset: 0;
+    position: fixed;
+    display: none;
+}
+
+.popup-open .overlay {
+    display: block;
+}
+
+#container {
+    display: flex;
+    padding-top: 70px;
+    margin: 10px;
+    color: #e0dddd;
+}
+
+#container #row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    margin: 0; 
+}
+
+#about-col-1 img {
+    margin-top: -50px;
+    width: 500px;
+    height: auto;
+}
+
+#about-col-1 {
+    max-width: 35%; 
+}
+
+#about-col-2 {
+    margin-top: -50px;
+    max-width: 60%; 
+}
+
+#about-col-2 #education{
+    margin-top: -25px;
+}
+
+#title {
+    font-size: 50px;
+    font-weight: 600;
+    color: white;
+    font-family: 'Merriweather';
+    font-style: italic;
+}
+
+#tab-titles {
+    display: flex;
+    margin: 20px 0 40px;
+}
+
+.tab-links {
+    margin-right: 50px;
+    font-size: 18px;
+    font-weight: 500;
+    cursor: pointer;
+    position: relative;
+}
+
+.tab-links::after {
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #1788ae;
+    position: absolute;
+    left: 0;
+    bottom: -8px;
+    transition: 0.5s;
+}
+
+.tab-links.active-link::after {
+    width: 50%;
+}
+
+.tab-contents {
+    display: none;
+    padding: 0 10px; 
+}
+
+.tab-contents ul {
+    padding: 0; 
+}
+
+.tab-contents ul li {
+    list-style: none;
+    margin: 10px 0; 
+}
+
+.tab-contents ul li span {
+    color: #1788ae;
+    font-size: 14px;
+}
+
+.tab-contents.active-tab {
+    display: block;
+}
+
+#projects {
+    margin: 0 50px 50px 90px;
+}
+
+.work img {
+    height: auto;
+    width: 400px;
+    display: block;
+    border-radius: 10px;
+    transition: transform 0.5s;
+}
+
+#work-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    margin-top: 50px;
+}
+
+.work {
+    overflow: hidden;
+    border-radius: 10px;
+    position: relative;
+    width: 400px;
+}
+
+#layer {
+    width: 100%;
+    height: 0;
+    background: linear-gradient(rgba(0, 0, 0, 0.6), #1788ae);
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 40px;
+    text-align: center;
+    font-size: 14px;
+    transition: height 0.5s;
+}
+
+#layer h3 {
+    font-weight: 700;
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+#layer a {
+    margin-top: 20px;
+    color: #1788ae;
+    text-decoration: none;
+    line-height: 60px;
+    font-size: 18px;
+    background: #fff;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    text-align: center;
+}
+
+.work:hover img {
+    transform: scale(1.1);
+}
+
+.work:hover #layer {
+    height: 100%;
+}
+.btn{
+    display: inline-block;
+    background-color: #1788ae;
+    padding: 10px 40px;
+    border-radius: 5px;
+    font-size: large;
+    font-weight: 600;
+    margin-top: 5px;
+    cursor: pointer;
+}
+#experience{
+    margin-top: -20px;
+}
+#education{
+    margin-bottom: -50px;
+}
+form input, form textarea{
+    width: 90%;
+    border: 0;
+    outline: none;
+    background: #2b2a2a;
+    padding: 15px;
+    margin: 15px 0;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 6px;
+}
+#msg{
+    color: #6fc5fa;
+    display: block;
+    margin-top: 10px;
+}
+#pantech, #octanet{
+    font-weight: 900;
+}
+#my-work-button, #resume-button, #about-me-button {
+    background: linear-gradient(to right, #1788ae, #80d3ef);
+}
+
+@media (max-width: 768px) { 
+    #container #row {
+        margin-left: -8px;
+    }
+    #section-1 {
+      margin-top: 75px;
+    } 
+    #title{
+        font-size: 30px;
+    }
+    #about-col-2{
+        flex-basis: 100%;
+        max-width: 100%;
+    }
+    
+    #about-col-1 {
+        margin-bottom: 60px;
+        max-width: 100%;
+    }
+    #about-col-2 {
+        font-size: 14px;
+    }
+    .tab-links{
+        font-size: 16px;
+        margin-right: 30px;
+    }
+    .close-icon {
+        margin-top: -35px;
+    }
+    #projects .work{
+        flex-basis: 100%;
+        margin-left: -100px;
+    }
+    #projects .work img{
+        width: 310px;
+        margin-left: 35px;
+        margin-bottom: 20px;
+    }
+    #contact .row {
+        display: flex;
+        flex-direction: column;
+    }
+    #contact .row form{
+        margin-left: 30px;
+        margin-bottom: 20px;
+    }
+    form input, form textarea{
+        font-size: 16px;
+        padding: 10px 15px;
+        margin-bottom: 8px;
+    }
+    #msg{
+        margin-left: 40px;
+        margin-bottom: 10px;
+    }
+}
