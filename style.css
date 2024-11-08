@@ -251,6 +251,9 @@ form input, form textarea{
 }
 
 @media (max-width: 768px) { 
+    #section-1{
+        margin-top: 30px;
+    }
     #container #row {
         margin-left: -8px;
     }
@@ -303,7 +306,7 @@ form input, form textarea{
         margin-bottom: 10px;
     }
     #my-work-button{
-        margin-top: -100px;
-        margin-bottom: 130px;
+        margin-top: -400px;
+        margin-bottom: 150px;
     }
 }
