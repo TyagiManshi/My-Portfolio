@@ -254,9 +254,9 @@ form input, form textarea{
     #container #row {
         margin-left: -8px;
     }
-    /* #section-1 {
-      margin-top: 75px;
-    }  */
+    #section-1 {
+      margin-top: 40px;
+    } 
     #title{
         font-size: 30px;
     }
@@ -304,5 +304,8 @@ form input, form textarea{
     #msg{
         margin-left: 40px;
         margin-bottom: 10px;
+    }
+    #my-work-button{
+        margin-bottom: 150px;
     }
 }
